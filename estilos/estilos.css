@@ -2,6 +2,21 @@ body {
     font-family: Arial, sans-serif;
 }
 
+nav {
+    background-color: steelblue;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+h1 {
+    color: steelblue;
+}
+
 main {
     max-width: 840px;
 }
@@ -9,6 +24,9 @@ main {
 main img {
     width: 150px;
     height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
 }
 
 aside {
