@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de HTML e CSS</title>
+    <link rel="stylesheet" href="estilos/questionario.css">
+</head>
+
+<body>
+    <main>
+        <h1>Questionário de HTML e CSS</h1>
+
+        <form>
+            <label for="q1">1. Qual linguagem usamos para estruturar uma página web?</label>
+            <input type="text" id="q1" name="q1" required>
+
+            <label for="q2">2. Explique com suas palavras para que serve o CSS.</label>
+            <textarea id="q2" name="q2" rows="4" required></textarea>
+
+            <label for="q3">3. Qual propriedade CSS muda a cor do texto?</label>
+            <select id="q3" name="q3" required>
+                <option value="" selected disabled>Escolha uma...</option>
+                <option value="color">color</option>
+                <option value="font-size">font-size</option>
+                <option value="background-color">background-color</option>
+            </select>
+
+            <label for="q4">4. Quantos níveis principais de heading existem no HTML?</label>
+            <input type="number" id="q4" name="q4" required>
+
+            <button type="submit">Enviar Questionário</button>
+        </form>
+    </main>
+</body>
+
+</html>
