@@ -1,71 +1,64 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Entre em contato com a Rio Abaixo Rafting para informações sobre reservas, passeios e dúvidas gerais.">
+    <meta name="description" content="Entre em contato com a Rio Abaixo Rafting para reservas, dúvidas sobre passeios e informações da empresa.">
     <meta name="author" content="Mary Argolo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rio Abaixo Rafting | Fale Conosco</title>
+    <title>Fale Conosco | Rio Abaixo Rafting</title>
     <link rel="stylesheet" href="estilos/rafting.css">
 </head>
 
 <body>
+    <header>
+        <img src="imagens/z-downriver.png" alt="Logo Rio Abaixo Rafting">
 
-```
-<header>
-    <img src="imagens/z-downriver.png" alt="Logo Rio Abaixo Rafting">
+        <nav>
+            <a href="index.html">Página Inicial</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="passeios.html">Passeios</a>
+            <a href="contato.html">Fale Conosco</a>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="index.html">Página Inicial</a>
-        <a href="sobre.html">Sobre Nós</a>
-        <a href="passeios.html">Passeios</a>
-        <a href="contato.html">Fale Conosco</a>
-    </nav>
-</header>
+    <main>
+        <h1>Fale Conosco - Rio Abaixo Rafting</h1>
 
-<main>
+        <section class="contact-info">
+            <h2>Informações da Empresa</h2>
+            <p><strong>Endereço:</strong> Rua das Corredeiras, 120 - Chapada Diamantina, BA</p>
+            <p><strong>Telefone:</strong> (75) 99999-0000</p>
+            <p><strong>E-mail:</strong> contato@rioabaixorafting.com</p>
 
-    <h1>Fale Conosco</h1>
+            <iframe
+                src="https://www.google.com/maps?q=Chapada%20Diamantina%20BA&output=embed"
+                width="600"
+                height="300"
+                loading="lazy">
+            </iframe>
+        </section>
 
-    <section class="contact-info">
-        <h2>Informações da Empresa</h2>
+        <section class="employees">
+            <h2>Conheça Nossa Equipe</h2>
 
-        <p><strong>Endereço:</strong> Rua das Corredeiras, 120 - Chapada Diamantina, BA</p>
-        <p><strong>Telefone:</strong> (75) 99999-0000</p>
-        <p><strong>E-mail:</strong> contato@rioabaixorafting.com</p>
+            <figure>
+                <img src="imagens/rafting18_600.jpg" alt="Instrutor de rafting">
+                <figcaption>Lucas Almeida - Instrutor de Rafting</figcaption>
+            </figure>
 
-        <iframe
-            src="https://www.google.com/maps?q=Chapada%20Diamantina%20BA&output=embed"
-            width="100%"
-            height="300"
-            loading="lazy">
-        </iframe>
-    </section>
+            <figure>
+                <img src="imagens/rafting22_600.jpg" alt="Guia de aventuras">
+                <figcaption>Ana Souza - Guia de Aventuras</figcaption>
+            </figure>
 
-    <section class="employees">
-        <h2>Conheça Nossa Equipe</h2>
-
-        <figure>
-            <img src="imagens/rafting12_1024.jpg" alt="Instrutor de rafting">
-            <figcaption>Lucas Almeida - Instrutor de Rafting</figcaption>
-        </figure>
-
-        <figure>
-            <img src="imagens/rafting16_1024.jpg" alt="Guia de aventuras">
-            <figcaption>Ana Souza - Guia de Aventuras</figcaption>
-        </figure>
-
-        <figure>
-            <img src="imagens/rafting18_600.jpg" alt="Atendimento ao cliente">
-            <figcaption>Marcos Lima - Atendimento e Reservas</figcaption>
-        </figure>
-    </section>
-
-    <section class="contact-form">
-        <h2>Envie Sua Mensagem</h2>
+            <figure>
+                <img src="imagens/rafting26_600.jpg" alt="Atendimento ao cliente">
+                <figcaption>Marcos Lima - Atendimento e Reservas</figcaption>
+            </figure>
+        </section>
 
         <form>
+            <h2>Envie Sua Mensagem</h2>
 
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" required>
@@ -76,18 +69,18 @@
             <fieldset>
                 <legend>Finalidade da Mensagem</legend>
 
-                <label>
-                    <input type="radio" name="purpose" value="general" required>
+                <label for="consulta">
+                    <input type="radio" id="consulta" name="purpose" value="consulta-geral" required>
                     Consulta Geral
                 </label>
 
-                <label>
-                    <input type="radio" name="purpose" value="reservation">
+                <label for="reserva">
+                    <input type="radio" id="reserva" name="purpose" value="pergunta-reserva">
                     Pergunta sobre Reserva
                 </label>
 
-                <label>
-                    <input type="radio" name="purpose" value="suggestion">
+                <label for="sugestao">
+                    <input type="radio" id="sugestao" name="purpose" value="sugestao-site">
                     Sugestão de Site
                 </label>
             </fieldset>
@@ -95,36 +88,31 @@
             <label for="message">Mensagem</label>
             <textarea id="message" name="message" rows="5" required></textarea>
 
-            <label>
-                <input type="checkbox" name="newsletter">
+            <label for="newsletter">
+                <input type="checkbox" id="newsletter" name="newsletter">
                 Quero receber a newsletter mensal
             </label>
 
             <button type="submit">Enviar Mensagem</button>
-
         </form>
-    </section>
+    </main>
 
-</main>
+    <footer>
+        <p>©2026 Rio Abaixo Rafting | Mary Argolo</p>
 
-<footer>
-    <p>©2026 Rio Abaixo Rafting | Mary Argolo</p>
+        <nav class="redes-sociais">
+            <a href="https://facebook.com">
+                <img src="imagens/facebook.svg" alt="Ícone do Facebook">
+            </a>
 
-    <nav class="socialmedia">
-        <a href="https://facebook.com">
-            <img src="imagens/facebook.svg" alt="Facebook">
-        </a>
+            <a href="https://instagram.com">
+                <img src="imagens/instagram.svg" alt="Ícone do Instagram">
+            </a>
 
-        <a href="https://instagram.com">
-            <img src="imagens/instagram.svg" alt="Instagram">
-        </a>
-
-        <a href="https://youtube.com">
-            <img src="imagens/youtube.svg" alt="YouTube">
-        </a>
-    </nav>
-</footer>
-```
-
+            <a href="https://youtube.com">
+                <img src="imagens/youtube.svg" alt="Ícone do YouTube">
+            </a>
+        </nav>
+    </footer>
 </body>
 </html>
