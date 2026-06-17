@@ -1,118 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Entre em contato com a Rio Abaixo Rafting para reservas, dúvidas sobre passeios e informações da empresa.">
-    <meta name="author" content="Mary Argolo">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fale Conosco | Rio Abaixo Rafting</title>
-    <link rel="stylesheet" href="estilos/rafting.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Entre em contato com a Rio Abaixo Rafting para reservas, dúvidas e informações.">
+  <meta name="author" content="Mary Argolo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco | Rio Abaixo Rafting</title>
+  <link rel="stylesheet" href="estilos/rafting.css">
 </head>
 
 <body>
-    <header>
-        <img src="imagens/z-downriver.png" alt="Logo Rio Abaixo Rafting">
+  <header>
+    <img src="imagens/z-downriver.png" alt="Logo Rio Abaixo Rafting">
 
-        <nav>
-            <a href="index.html">Página Inicial</a>
-            <a href="sobre.html">Sobre Nós</a>
-            <a href="passeios.html">Passeios</a>
-            <a href="contato.html">Fale Conosco</a>
-        </nav>
-    </header>
+    <nav>
+      <a href="index.html">Página Inicial</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="passeios.html">Viagens</a>
+      <a href="contato.html">Fale Conosco</a>
+    </nav>
+  </header>
 
-    <main>
-        <h1>Fale Conosco - Rio Abaixo Rafting</h1>
+  <main>
+    <h1>Companhia de Rafting em Corredeiras</h1>
 
-        <section class="contact-info">
-            <h2>Informações da Empresa</h2>
-            <p><strong>Endereço:</strong> Rua das Corredeiras, 120 - Chapada Diamantina, BA</p>
-            <p><strong>Telefone:</strong> (75) 99999-0000</p>
-            <p><strong>E-mail:</strong> contato@rioabaixorafting.com</p>
+    <section class="company-info">
+      <h2>Informações de Contato</h2>
+      <p><strong>123 Rua Principal do Rio</strong></p>
+      <p><strong>Foz do Iguaçu, Paraná</strong></p>
+      <p><strong>+55 45 99999-9999</strong></p>
+      <p><strong>info@corredeiras.com</strong></p>
+    </section>
 
-            <iframe
-                src="https://www.google.com/maps?q=Chapada%20Diamantina%20BA&output=embed"
-                width="600"
-                height="300"
-                loading="lazy">
-            </iframe>
-        </section>
+    <section class="contact-grid">
+      <h2>Mapa e Formulário</h2>
 
-        <section class="employees">
-            <h2>Conheça Nossa Equipe</h2>
+      <iframe
+        src="https://www.google.com/maps?q=Foz%20do%20Igua%C3%A7u%20Paran%C3%A1&output=embed"
+        width="600"
+        height="350"
+        loading="lazy"
+        title="Localização da empresa de rafting">
+      </iframe>
 
-            <figure>
-                <img src="imagens/rafting18_600.jpg" alt="Instrutor de rafting">
-                <figcaption>Lucas Almeida - Instrutor de Rafting</figcaption>
-            </figure>
+      <form>
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Digite aqui" required>
 
-            <figure>
-                <img src="imagens/rafting22_600.jpg" alt="Guia de aventuras">
-                <figcaption>Ana Souza - Guia de Aventuras</figcaption>
-            </figure>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite aqui" required>
 
-            <figure>
-                <img src="imagens/rafting26_600.jpg" alt="Atendimento ao cliente">
-                <figcaption>Marcos Lima - Atendimento e Reservas</figcaption>
-            </figure>
-        </section>
+        <fieldset>
+          <legend>Propósito da Mensagem</legend>
 
-        <form>
-            <h2>Envie Sua Mensagem</h2>
+          <label for="duvida">
+            <input type="radio" id="duvida" name="purpose" value="duvida-geral" required>
+            Dúvida Geral
+          </label>
 
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" required>
+          <label for="reserva">
+            <input type="radio" id="reserva" name="purpose" value="pergunta-reserva">
+            Pergunta sobre Reserva
+          </label>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required>
+          <label for="sugestao">
+            <input type="radio" id="sugestao" name="purpose" value="sugestao">
+            Sugestão
+          </label>
+        </fieldset>
 
-            <fieldset>
-                <legend>Finalidade da Mensagem</legend>
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="5" placeholder="Digite aqui" required></textarea>
 
-                <label for="consulta">
-                    <input type="radio" id="consulta" name="purpose" value="consulta-geral" required>
-                    Consulta Geral
-                </label>
+        <label for="newsletter">
+          <input type="checkbox" id="newsletter" name="newsletter">
+          Por favor, me inscreva na newsletter mensal
+        </label>
 
-                <label for="reserva">
-                    <input type="radio" id="reserva" name="purpose" value="pergunta-reserva">
-                    Pergunta sobre Reserva
-                </label>
+        <button type="submit">Entrar em Contato!</button>
+      </form>
+    </section>
 
-                <label for="sugestao">
-                    <input type="radio" id="sugestao" name="purpose" value="sugestao-site">
-                    Sugestão de Site
-                </label>
-            </fieldset>
+    <section class="employees">
+      <h2>Estamos Aqui para Servi-lo</h2>
 
-            <label for="message">Mensagem</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+      <figure>
+        <img src="imagens/rafting18_600.jpg" alt="Perfil do funcionário">
+        <figcaption>Perfil do Funcionário</figcaption>
+      </figure>
 
-            <label for="newsletter">
-                <input type="checkbox" id="newsletter" name="newsletter">
-                Quero receber a newsletter mensal
-            </label>
+      <figure>
+        <img src="imagens/rafting22_600.jpg" alt="Perfil do funcionário">
+        <figcaption>Perfil do Funcionário</figcaption>
+      </figure>
 
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-    </main>
+      <figure>
+        <img src="imagens/rafting26_600.jpg" alt="Perfil do funcionário">
+        <figcaption>Perfil do Funcionário</figcaption>
+      </figure>
+    </section>
+  </main>
 
-    <footer>
-        <p>©2026 Rio Abaixo Rafting | Mary Argolo</p>
+  <footer>
+    <p>©2026 Rio Abaixo Rafting | Mary Argolo</p>
 
-        <nav class="redes-sociais">
-            <a href="https://facebook.com">
-                <img src="imagens/facebook.svg" alt="Ícone do Facebook">
-            </a>
-
-            <a href="https://instagram.com">
-                <img src="imagens/instagram.svg" alt="Ícone do Instagram">
-            </a>
-
-            <a href="https://youtube.com">
-                <img src="imagens/youtube.svg" alt="Ícone do YouTube">
-            </a>
-        </nav>
-    </footer>
+    <nav class="socialmedia">
+      <a href="https://facebook.com">
+        <img src="imagens/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://instagram.com">
+        <img src="imagens/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://youtube.com">
+        <img src="imagens/youtube.svg" alt="YouTube">
+      </a>
+    </nav>
+  </footer>
 </body>
 </html>
