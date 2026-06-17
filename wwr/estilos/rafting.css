@@ -7,7 +7,6 @@
     --heading-color: #0b3d5c;
     --light-text-color: #ffffff;
     --border-color: #777777;
-
     --heading-font: Arial, sans-serif;
     --paragraph-font: Arial, sans-serif;
 }
@@ -39,9 +38,11 @@ header img {
     width: 120px;
 }
 
-header nav {
+header nav,
+.socialmedia {
     display: flex;
     justify-content: flex-end;
+    gap: 15px;
 }
 
 header nav a {
@@ -52,27 +53,34 @@ header nav a {
     text-decoration: none;
 }
 
-header nav a:hover {
-    background-color: var(--primary-color);
+header nav a:hover,
+.chamada a:hover,
+.intro-passeios a:hover,
+button:hover {
+    background-color: var(--secondary-color);
     color: var(--light-text-color);
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--heading-font);
     color: var(--heading-color);
 }
 
-.hero {
+.hero,
+.home-hero {
     max-width: 1100px;
     margin: 20px auto;
     position: relative;
 }
 
-.hero > img {
+.hero > img,
+.home-hero img {
     width: 100%;
-    height: 350px;
+    height: 380px;
     object-fit: cover;
+    display: block;
 }
 
 .hero h1 {
@@ -80,7 +88,6 @@ h2 {
     top: 30px;
     width: 100%;
     text-align: center;
-    color: var(--heading-color);
     background-color: var(--background-color);
     padding: 10px;
     font-size: 2.5rem;
@@ -102,16 +109,45 @@ h2 {
     margin-left: 20px;
 }
 
-.historia {
-    max-width: 1100px;
-    margin: 20px auto;
+.home-hero-texto {
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
+    max-width: 420px;
+}
+
+.home-hero-texto h1 {
+    margin-bottom: 10px;
+}
+
+.historia,
+.aventuras,
+.newsletter,
+.chamada,
+.intro-passeios,
+.tabela-passeios,
+.contact-info,
+.contact-form {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+}
+
+.historia,
+.newsletter,
+.chamada,
+.intro-passeios {
     background-color: var(--accent-color);
-    color: var(--text-color);
 }
 
 .historia h2,
-.aventuras h2 {
+.aventuras h2,
+.newsletter h2,
+.chamada h2,
+.intro-passeios h1,
+.tabela-passeios h2 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -128,12 +164,7 @@ h2 {
 }
 
 .aventuras {
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 20px;
     border: 1px solid var(--border-color);
-    background-color: var(--background-color);
-    color: var(--text-color);
 }
 
 .aventuras-galeria {
@@ -149,83 +180,17 @@ h2 {
     object-fit: cover;
 }
 
-figure {
-    margin: 0;
-}
-
-figcaption {
-    margin-top: 8px;
-    color: var(--text-color);
-}
-
-footer {
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 25px;
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.socialmedia {
-    display: flex;
-    gap: 15px;
-}
-
-.socialmedia img {
-    width: 40px;
-    height: 40px;
-} /* ===== Página Inicial S06 ===== */
-
-.home-hero {
-    max-width: 1100px;
-    margin: 20px auto;
-    position: relative;
-}
-
-.home-hero img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    display: block;
-}
-
-.home-hero-texto {
-    position: absolute;
-    top: 35%;
-    left: 8%;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    max-width: 420px;
-}
-
-.home-hero-texto h1 {
-    color: var(--heading-color);
-    margin-bottom: 10px;
-}
-
-.newsletter,
-.chamada {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: var(--accent-color);
-}
-
-.newsletter h2,
-.chamada h2 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.newsletter form {
+.newsletter form,
+.contact-form form,
+fieldset {
     display: grid;
     gap: 12px;
 }
 
-.newsletter input {
+.newsletter input,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
     padding: 10px;
     font-size: 1rem;
 }
@@ -244,20 +209,30 @@ footer {
     text-decoration: none;
 }
 
-.chamada a:hover,
-.intro-passeios a:hover {
-    background-color: var(--secondary-color);
-}
-
-.home-grid {
+.home-grid,
+.cards-passeios {
     max-width: 1100px;
     margin: 30px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
-.home-grid article {
+.home-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.cards-passeios {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.home-grid h2,
+.cards-passeios h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.home-grid article,
+.cards-passeios article {
     padding: 15px;
     background-color: var(--accent-color);
 }
@@ -268,52 +243,15 @@ footer {
     object-fit: cover;
 }
 
-.home-grid h2 {
-    margin: 15px 0 10px;
-}
-
-/* ===== Página de Passeios S06 ===== */
-
-.intro-passeios {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 25px;
-    text-align: center;
-    background-color: var(--accent-color);
-}
-
-.cards-passeios {
-    max-width: 1100px;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.cards-passeios article {
-    padding: 15px;
-    background-color: var(--accent-color);
-}
-
 .cards-passeios img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
-.cards-passeios h2 {
+.home-grid h3,
+.cards-passeios h3 {
     margin: 15px 0 10px;
-}
-
-.tabela-passeios {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-}
-
-.tabela-passeios h2 {
-    text-align: center;
-    margin-bottom: 15px;
 }
 
 table {
@@ -331,4 +269,75 @@ td {
 th {
     background-color: var(--primary-color);
     color: var(--light-text-color);
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    margin-top: 8px;
+}
+
+footer {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialmedia img {
+    width: 40px;
+    height: 40px;
+}
+
+.employees {
+    max-width: 900px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.employees h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.employees figure {
+    text-align: center;
+}
+
+.employees img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info iframe {
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+fieldset {
+    padding: 15px;
+    border: 1px solid var(--border-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 12px;
+    cursor: pointer;
 }
